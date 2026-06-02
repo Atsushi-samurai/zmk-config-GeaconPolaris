@@ -16,10 +16,13 @@
     dr-gpios = <&gpio1 13 (GPIO_ACTIVE_HIGH)>;
 
     sensitivity = "2x";
-    // sleep;
     absolute-gestures;
     tap-to-click;
     y-invert;
+
+    edge-scroll-margin = <260>;
+    scroll-step = <80>;
+
     tap-timeout-ms = <250>;
     tap-move-threshold = <140>;
     };
