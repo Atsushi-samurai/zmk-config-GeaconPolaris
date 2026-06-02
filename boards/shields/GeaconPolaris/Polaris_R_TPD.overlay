@@ -19,6 +19,7 @@
     // sleep;
     absolute-gestures;
     tap-to-click;
+    y-invert;
     tap-timeout-ms = <250>;
     tap-move-threshold = <140>;
     };
