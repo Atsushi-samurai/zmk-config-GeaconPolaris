@@ -34,19 +34,19 @@
 
         // mouse scroll
         rsr_msch: rsr_msch {
-			compatible = "zmk,behavior-runtime-sensor-rotate";
-			#sensor-binding-cells = <0>;
-			tap-ms = <20>;
-			cw-binding = <&msc SCRL_DOWN>;
-			ccw-binding = <&msc SCRL_UP>;
-		};
+            compatible = "zmk,behavior-runtime-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            tap-ms = <20>;
+            cw-binding = <&msc SCRL_DOWN>;
+            ccw-binding = <&msc SCRL_UP>;
+        };
         rsr_mscv: rsr_mscv {
-			compatible = "zmk,behavior-runtime-sensor-rotate";
-			#sensor-binding-cells = <0>;
-			tap-ms = <20>;
-			cw-binding = <&msc SCRL_RIGHT>;
-			ccw-binding = <&msc SCRL_LEFT>;
-		};
+            compatible = "zmk,behavior-runtime-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            tap-ms = <20>;
+            cw-binding = <&msc SCRL_RIGHT>;
+            ccw-binding = <&msc SCRL_LEFT>;
+        };
     };
 };
 
@@ -70,6 +70,24 @@
         COMBO_LANG2 {
             bindings = <&kp LANG2>;
             key-positions = <2 3>;
+        };
+
+        COMBO_MOUSE_LEFT {
+            bindings = <&mkp MB1>;
+            key-positions = <19 20>;
+            layers = <DEF>;
+        };
+
+        COMBO_MOUSE_RIGHT {
+            bindings = <&mkp MB2>;
+            key-positions = <20 21>;
+            layers = <DEF>;
+        };
+
+        COMBO_MOUSE_MIDDLE {
+            bindings = <&mkp MB3>;
+            key-positions = <19 21>;
+            layers = <DEF>;
         };
     };
 
