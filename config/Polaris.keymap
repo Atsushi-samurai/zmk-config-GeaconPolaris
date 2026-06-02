@@ -87,7 +87,7 @@
 &mo SCROLL    &mo SSNIPE
             >;
 
-            sensor-bindings = <&rsr_msch>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         function_layer {
@@ -115,7 +115,7 @@
 &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&rsr_msch>;
         };
 
         snipe_layer {
