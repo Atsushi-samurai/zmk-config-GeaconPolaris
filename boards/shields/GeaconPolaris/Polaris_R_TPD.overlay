@@ -10,14 +10,17 @@
     clock-frequency = <100000>; 
     
     glidepoint_R: glidepoint_R@2a {
-        compatible = "cirque,pinnacle";
-        reg = <0x2a>;
-        status = "okay";
-        dr-gpios = <&gpio1 13 (GPIO_ACTIVE_HIGH)>;
+    compatible = "cirque,pinnacle";
+    reg = <0x2a>;
+    status = "okay";
+    dr-gpios = <&gpio1 13 (GPIO_ACTIVE_HIGH)>;
 
-        sensitivity = "2x";
-        // sleep;
-        no-taps;
+    sensitivity = "2x";
+    // sleep;
+    absolute-gestures;
+    tap-to-click;
+    tap-timeout-ms = <250>;
+    tap-move-threshold = <140>;
     };
 };
 
