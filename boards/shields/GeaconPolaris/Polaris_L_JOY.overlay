@@ -66,12 +66,12 @@
 &left_encoder {
     a-gpios = <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
     b-gpios = <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    steps = <36>;
+    steps = <24>;
     status = "okay";
 };
 
 &sensors {
-    triggers-per-rotation = <5>;
+    triggers-per-rotation = <24>;
 };
 
 &scroll_runtime_input_processor_l {
