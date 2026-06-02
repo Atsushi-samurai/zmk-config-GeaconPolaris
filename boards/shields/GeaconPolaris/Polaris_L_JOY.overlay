@@ -47,8 +47,8 @@
     device = <&anin0>;
 
     input-processors = <&scroll_runtime_input_processor_l>,
-                       <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
-                       <&zip_xy_to_scroll_mapper>;
+                       <&zip_xy_to_scroll_mapper>,
+                       <&zip_scroll_transform INPUT_TRANSFORM_XY_SWAP>;
     };
     
 	scroll_runtime_input_processor_l: scroll_runtime_input_processor_l {
