@@ -48,7 +48,7 @@
 
     input-processors = <&scroll_runtime_input_processor_l>,
                        <&zip_xy_to_scroll_mapper>,
-                       <&zip_scroll_transform INPUT_TRANSFORM_XY_SWAP>;
+                       <&zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
     };
     
 	scroll_runtime_input_processor_l: scroll_runtime_input_processor_l {
