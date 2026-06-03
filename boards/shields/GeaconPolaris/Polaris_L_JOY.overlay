@@ -56,7 +56,7 @@
         processor-label = "ScrL";
 		type = <INPUT_EV_REL>;
 		track-remainders;
-		scale-divisor = <2>;
+		scale-divisor = <4>;
 		#input-processor-cells = <0>;
 	};   
 };
