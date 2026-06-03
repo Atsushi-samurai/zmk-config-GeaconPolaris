@@ -20,7 +20,7 @@
     tap-to-click;
     y-invert;
 
-    edge-scroll-margin = <260>;
+    edge-scroll-margin = <300>;
     scroll-step = <80>;
 
     tap-timeout-ms = <250>;
