@@ -32,6 +32,9 @@ jobs:
           echo "branch=$BRANCH_NAME" >> $GITHUB_OUTPUT
           echo "Branch name is $BRANCH_NAME"
 
+      - name: Sync latest branch changes
+        run: git pull --ff-only origin ${{ steps.branch-name.outputs.branch }}
+
       - name: Prepare firmware directory
         run: |
           mkdir -p firmware/${{ steps.branch-name.outputs.branch }}
@@ -72,6 +75,8 @@ jobs:
     if: ${{ always() }}
     runs-on: ubuntu-latest
     continue-on-error: true
+    env:
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
     steps:
       - name: Checkout trigger commit
         uses: actions/checkout@v4
@@ -113,9 +118,10 @@ jobs:
           } >> "$GITHUB_OUTPUT"
 
       - name: Send Discord notification
+        if: ${{ env.DISCORD_WEBHOOK_URL != '' }}
         uses: stegzilla/discord-notify@v2
         with:
-          webhook_url: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          webhook_url: ${{ env.DISCORD_WEBHOOK_URL }}
           title: ZMK firmware ${{ steps.notification.outputs.overall }}
           title_url: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
           colour: ${{ steps.notification.outputs.colour }}
@@ -126,3 +132,7 @@ jobs:
             **ビルド:** ${{ steps.notification.outputs.build }}
             **ファームウェア保存:** ${{ steps.notification.outputs.upload }}
             **実行結果:** https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      - name: Skip Discord notification
+        if: ${{ env.DISCORD_WEBHOOK_URL == '' }}
+        run: echo "DISCORD_WEBHOOK_URL is not set; skipping Discord notification."
