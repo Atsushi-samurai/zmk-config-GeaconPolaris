@@ -83,7 +83,7 @@
             label = "Def";
             bindings = <
 &kp ESC       &kp Q     &kp W      &kp E     &kp R          &kp T                   &lt SNIPE Y     &kp U         &kp I         &kp O     &kp P     &kp MINUS
-&lt BT TAB    &kp A     &kp S      &kp D     &kp F          &kp G                   &kp H           &kp J         &kp K         &kp L     &kp BSLH  &kp LSHFT
+&lt BT TAB    &kp A     &kp S      &kp D     &kp F          &kp G                   &kp H           &kp J         &kp K         &kp L     &kp BSLH  &mt LSHFT SEMI
 &kp LSHFT     &kp Z     &kp X      &kp C     &kp V          &kp B                   &kp N           &kp M         &kp COMMA     &kp DOT   &kp UP
 &kp LCTL      &kp LALT  &kp LGUI             &lt NUM SPACE  &lt FUNC SPACE          &lt FUNC ENTER  &lt NUM BACKSPACE  &kp LC(SPACE) &kp LEFT  &kp DOWN  &kp RIGHT
 &kp LEFT      &kp UP    &kp SPACE  &kp DOWN  &kp RIGHT                              &mkp MB1        &mkp MB3      &mkp MB2
